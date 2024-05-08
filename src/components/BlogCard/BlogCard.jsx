@@ -1,6 +1,10 @@
 import styles from "./BlogCard.module.css"
+import { formatDistanceToNow } from 'date-fns'
 
 export const BlogCard = ({poster, tag, title, description, name, avatar ,postedAt}) => {
+  const result = formatDistanceToNow(
+  new Date(postedAt)
+)
   return (
     <div className={styles.card}>
   <div className={styles.cardHeader}>
@@ -24,7 +28,7 @@ export const BlogCard = ({poster, tag, title, description, name, avatar ,postedA
       />
       <div>
             <h3 className={styles.userName}>{name}</h3>
-            <small className={styles.date}>{postedAt}</small>
+            <small className={styles.date}>{result}</small>
       </div>
     </div>
   </div>
