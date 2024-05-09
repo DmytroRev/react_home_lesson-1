@@ -1,5 +1,6 @@
 import article from './data/article.json';
 import stats from './data/stats.json';
+import { FeedbackForm } from 'components/FeedbackForm/FeedbackForm';
 
 import {
   Section,
@@ -32,6 +33,7 @@ export const App = () => {
         <ForbesList />
         <Heading title="Task 4 Crypto history" top bottom />
         <CryptoHistory />
+        <FeedbackForm />
       </Container>
     </Section>
   );
